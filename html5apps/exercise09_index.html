@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Slot Machine Simulation App (with own service)</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<style type="text/css">
+		body { background: url('casino.jpg') no-repeat center center fixed;-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+		h2 { padding: 10px; margin-top: 0px;font-family: Arial,Helvetica,sans-serif; background-color: #ffffff}
+		h3 { font-family: Arial,Helvetica,sans-serif;}
+		form { margin-top: 15px; }
+		form > input { margin-right: 15px; }
+		h1   {color: blue;background-color: rgba(255,255,255,0.6);}
+		#results { font-family: Arial,Helvetica,sans-serif;float:right; border:0; background-color: rgba(255,255,255,0.6);}
+	</style>
+</head>
+<body>
+	<div id="results"></div>
+	<div id="resultsOwn"></div>
+	<div id="my_camera"><h2>Test</h2></div>
+	
+	<!-- First, include the Webcam.js JavaScript Library -->
+    <!-- Re-used webcam code from https://github.com/jhuckaby/webcamjs under MIT License-->
+	<script type="text/javascript" src="webcam.min.js"></script>
+	
+	<!-- Configure a few settings and attach camera -->
+	<script language="JavaScript">
+		Webcam.set({width: 160,height: 120,	image_format: 'jpeg',jpeg_quality: 90	});
+		Webcam.attach( '#my_camera' );
+	</script>
+	
+	<!-- A button for taking snaps -->
+	<form><input type=button value="Check sentiment" onClick="check_sentiment()"></form>
+	
+	<!-- Code to handle taking the snapshot and displaying it locally -->
+	<script language="JavaScript">
+		function check_sentiment() {
+			
+			//##################################################
+			// Adapt the following values
+			//##################################################
+			var idCasino      = "Las Vegas Gamble Bamba";
+			var idSlotmachine = "BucketBandit1";
+			//##################################################
+
+			// take snapshot and get image data
+			Webcam.snap( function(data_uri) {
+				// In data_uri you have the image file
+				var myData = JSON.stringify({"dataUri": data_uri});
+				var url = "/sentimentservice/" + idCasino + "/slotMachines/" + idSlotmachine + "/datauri";
+
+				$.ajax({
+				    type: "POST",
+				    url: url,
+				    // The key needs to match your method's input parameter (case-sensitive).
+				    data: myData,
+				    contentType: "application/json; charset=utf-8",
+				    dataType: "json",
+				    success: function(response){
+				    	document.getElementById('results').innerHTML =  '<center><h2>Sentiment detector</h2><img src="'+data_uri+'"/><h3>Detected ' + response.emotion+ '</h3></center>';
+				    	//alert(response);
+				    },
+				    failure: function(errMsg) {
+				    	document.getElementById('results').innerHTML =  '<center><h2>Sentiment detector</h2><img src="'+data_uri+'"/><h3>Detected ' + errMsg + '</h3></center>';
+				    }
+				});
+
+				var urlOwn = "/ownsentimentservice/" + idCasino + "/slotMachines/" + idSlotmachine + "/datauri";
+
+				$.ajax({
+				    type: "POST",
+				    url: urlOwn,
+				    // The key needs to match your method's input parameter (case-sensitive).
+				    data: myData,
+				    contentType: "application/json; charset=utf-8",
+				    dataType: "json",
+				    success: function(response){
+				    	document.getElementById('resultsOwn').innerHTML =  '<center><h2>Sentiment detector</h2><img src="'+data_uri+'"/><h3>Detected ' + response.emotion+ '</h3></center>';
+				    	//alert(response);
+				    },
+				    failure: function(errMsg) {
+				    	document.getElementById('resultsOwn').innerHTML =  '<center><h2>Sentiment detector</h2><img src="'+data_uri+'"/><h3>Detected ' + errMsg + '</h3></center>';
+				    }
+				});
+
+				document.getElementById('results').innerHTML =  '<img src="'+data_uri+'"/>';
+				document.getElementById('resultsOwn').innerHTML =  '<img src="'+data_uri+'"/>';
+
+			} );
+		};
+	</script>
+	
+</body>
+</html>

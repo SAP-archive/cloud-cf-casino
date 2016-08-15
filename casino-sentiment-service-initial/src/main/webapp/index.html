@@ -1,0 +1,55 @@
+<body>
+<h1>Sentiment Service API</h1>
+<b><pre>GET     https://&lt;appname&gt;.cfapps.us10.hana.ondemand.com/sentiment/casinos</pre></b>
+Returns the aggregated sentiment value for each known casino. 
+<br>Example: <pre>
+  [
+    { "casinoid": "Las Vegas Grand Casino", "sentiment": "62.5" }, 
+    { "casinoid": "Monte Carlo Casino Royal", "sentiment": "68.0" }
+  ]</pre>
+Response: 200 method returns successfully  
+  
+<br>
+<b><pre>GET     https://&lt;appname&gt;.cfapps.us10.hana.ondemand.com/sentiment/casinos/{casinoId}</pre></b>
+Returns the aggregated sentiment value for the specified casino. 
+<br>Example: <pre>
+  { "casinoid": "Las Vegas Grand Casino", "sentiment": "62.5" }
+</pre>
+Response: 200 method returns successfully
+
+<br>
+<b><pre>GET     https://&lt;appname&gt;.cfapps.us10.hana.ondemand.com/sentiment/casinos/{casinoId}/slotMachines</pre></b>
+Returns the aggregated sentiment value for all slot machines of the specified casino. 
+<br>Example: <pre>
+  [ 
+    { "casinoid": "Las Vegas Grand Casino", "slotmachineid": "Black Jack 1", "sentiment": "55.4" }, 
+    { "casinoid": "Las Vegas Grand Casino", "slotmachineid": "One-Armed Bandit", "sentiment": "87.4" }
+  ]
+</pre>  
+Response: 200 method returns successfully
+
+<br>
+<b><pre>GET     https://&lt;appname&gt;.cfapps.us10.hana.ondemand.com/sentiment/casinos/{casinoId}/slotMachines/{slotMachineId}</pre></b>
+Returns the aggregated sentiment value for the given slot machine of the specified casino. 
+<br>Example: <pre>
+  { "casinoid": "Las Vegas Grand Casino", "slotmachineid": "Black Jack 1", "sentiment": "55.4" }  
+</pre>
+Response: 200 method returns successfully
+
+<br>
+<b><pre>POST     https://&lt;appname&gt;.cfapps.us10.hana.ondemand.com/sentiment/casinos/{casinoId}/slotMachines/{slotMachineId}/image</pre></b>
+
+Returns the aggregated sentiment value for each known casino. 
+<br>Example body: <pre>
+  { "imageUrl": "&lt;url-to-image&gt;" }
+</pre>
+Response: 201 new sentiment value successfully detected and persisted 
+
+<br>
+<b><pre>POST     https://&lt;appname&gt;.cfapps.us10.hana.ondemand.com/sentiment/casinos/{casinoId}/slotMachines/{slotMachineId}/dataUri</pre></b>
+Returns the aggregated sentiment value for each known casino. 
+<br>Example body: <pre>
+  { "dataUri": "&lt;dataUri&gt;" }
+</pre>
+Response: 201 new sentiment value successfully detected and persisted 
+</body>

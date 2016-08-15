@@ -1,0 +1,9 @@
+#
+#Wed Aug 03 18:42:38 UTC 2016
+Name=sentimentservice
+URL=https\://sentiment-service.cfapps.us10.hana.ondemand.com/sentiment/casinos
+ProxyType=Internet
+Type=HTTP
+CloudConnectorVersion=2
+Authentication=NoAuthentication
+Description=sentimentservice

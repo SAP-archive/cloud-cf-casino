@@ -1,0 +1,18 @@
+This program references/bundles the following third party open source or other free download components. 
+The third party licensors of these components may provide additional license rights, 
+terms and conditions and/or require certain notices as described below. 
+
+Spring framework (https://projects.spring.io/spring-framework/)
+Licensed under Apache License, Version 2.0 - https://github.com/spring-projects/spring-framework/blob/master/src/dist/license.txt
+
+Spring Boot (http://projects.spring.io/spring-boot/)
+Licensed under Apache License, Version 2.0 - https://github.com/spring-projects/spring-boot/blob/master/LICENSE.txt
+
+Spring Cloud (http://projects.spring.io/spring-cloud/)
+Licensed under Apache License, Version 2.0 - https://github.com/spring-cloud/spring-cloud-starters/blob/master/LICENSE.txt
+
+Netflix Hystrix (https://github.com/Netflix/Hystrix)
+Licensed under Apache License, Version 2.0 - https://github.com/Netflix/Hystrix/blob/master/LICENSE-2.0.txt
+
+JSON.simple (https://github.com/fangyidong/json-simple)
+Licensed under Apache License, Version 2.0 - https://github.com/fangyidong/json-simple/blob/master/LICENSE.txt

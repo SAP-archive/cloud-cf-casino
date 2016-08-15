@@ -1,0 +1,15 @@
+%YAML 1.1
+# This file is a Cloud Foundry application manifest.
+# Use it to deploy your stickiness service to a Cloud Foundry environment.
+# To do so with the Cloud Foundry CLI-tool, execute the following command in this directory:
+#
+#     cf push
+#
+# For more information see:
+# http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html
+---
+applications:
+- name: sentiment-service
+  instances: 1
+  memory: 512M
+  path: target/sentiment-service-1.0.war

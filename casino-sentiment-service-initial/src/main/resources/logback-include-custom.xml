@@ -1,0 +1,3 @@
+<included>
+	<logger name="com.sample.casino" level="DEBUG" />
+</included>
