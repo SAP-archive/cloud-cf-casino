@@ -17,7 +17,7 @@ Deploy the following three HTML5 applications on your free developer account on 
 
 1. Open your free developer account in the browser via the link [https://account.hanatrial.ondemand.com/cockpit](https://account.hanatrial.ondemand.com/cockpit) so that you get to the HCP cockpit - the landing page for your HCP account.
 <br><br>
-![Account landing page](../../img/img02_1_001.png)
+![Account landing page](/SAP/cloud-cf-casino/blob/master/img/img02_1_001.png)
 <br><br>
 2. Click on the tab ```Destinations``` on the left hand side navigation pane.
 <br><br>
