@@ -14,14 +14,14 @@ In this exercise you'll learn how to develop the REST API of the Casino Sentimen
 
 1. In Eclipse, open the class ```HCPWebApplication```: press ```Ctrl+Shift+T```, then type ```HCPWebApplication``` in the input field, and select the class. Note that the class is annotated with ```@SpringBootApplication``` and the class declaration extends ```SpringBootServletInitializer```. This declares the class to be a [Spring Boot application](http://projects.spring.io/spring-boot/). Spring Boot packages applications as normal JAR files which contain an embedded Tomcat runtime container and thus can be started as standalone Java applications. Also note that the Spring Boot application get launched in the ```main(...)``` method.
 <br><br>
-![Eclipse in Windows Start menu](../../img/img05_01.png)
+![Eclipse in Windows Start menu](/SAP/cloud-cf-casino/blob/master/img/img05_01.png?raw=true)
 <br><br>
 
 ## 2. Define the REST API of the service
 
 1. In Eclipse, open the class ```RootController``` (you can do this e.g. by entering ```Ctrl+Shift+T``` and then typing ```RootController``` in the input field). Annotate the class with ```@RestController``` and ```@RequestMapping("/sentiment")```.  
 <br><br>
-![Eclipse in Windows Start menu](../../img/img05_02.png)
+![Eclipse in Windows Start menu](/SAP/cloud-cf-casino/blob/master/img/img05_02.png?raw=true)
 <br><br>
    Press ```Ctrl+Shift+O``` to add the missing import statements.
    The ```@RestController``` annotation declares the class as a component to handle HTTP requests, and the ```@RequestMapping("/sentiment")``` annotation tells Spring to map HTTP requests to URL path "/sentiment" to this controller class.

@@ -27,7 +27,7 @@ In this exercise you'll learn how to use the PostgreSQL service provided on HCP 
    ```
    This binds the postgres-service instance that you have just created, to your Casino Sentiment Service application. Next time the application gets deployed, the application can make use of the bound PostgreSQL service instance. The Spring framework will also detect this service binding and auto-wire the PostgreSQL service instance to a ```@JdbcTemplate``` property (see next section).   
 
-4. Open the pom.xml file that you find in the root directory of the project, and comment in following dependency to the Spring Boot JPA package:
+4. Open the ```pom.xml``` file that you find in the root directory of the project, and comment in following dependency to the Spring Boot JPA package:
   ```
   <dependency>
     <groupId>org.springframework.boot</groupId>
