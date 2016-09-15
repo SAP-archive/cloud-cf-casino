@@ -38,7 +38,7 @@ In this exercise you'll learn how to develop the REST API of the Casino Sentimen
        return response;
     }
     ```
-    Press ```Ctrl+Shift+O``` to add the missing import statements.
+    Press ```Ctrl+Shift+O``` to add the missing import statements (select class ```org.springframework.http.HttpStatus``` if you are asked for selection).
     <br>
     The ```@RequestMapping(...)``` annotation declares the method to be the handler for GET requests to ```/sentiment/casinos``` with the expected response type to be a JSON object. In this stage, the method returns a hard-coded ```Hello World 1``` value marshalled in a JSON object.
 
