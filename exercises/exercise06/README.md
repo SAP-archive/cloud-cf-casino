@@ -24,7 +24,7 @@ In this exercise you'll learn how to use a remote service that is exposed throug
  		headers.setContentType(MediaType.APPLICATION_JSON);
  		HttpEntity<String> entity = new HttpEntity<String>("{ \"image_url\" : \"" + imageUrl + "\" }", headers);
 
-    RestTemplate restTemplate = new RestTemplate();
+      RestTemplate restTemplate = new RestTemplate();
  		ResponseEntity<String> serviceResponse = restTemplate.exchange(EMOTION_SERVICE_URL, HttpMethod.POST, entity,
  				String.class);
 
