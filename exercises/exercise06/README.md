@@ -12,7 +12,7 @@ In this exercise you'll learn how to use a remote service that is exposed throug
 
 ## 1. Extend the Casino Sentiment Service to use the Emotion Service accessibly via YaaS
 
-1. First, you will implement the class ```EmotionService```. This class is meant to encapsulate the remote call to the YaaS Emotion Service. Open the class in Eclipse (for this, press ```Ctrl+Shift+T``` and enter ```EmotionService``` in the input field).
+1. First, you will implement the class ```EmotionService```. This class is meant to encapsulate the remote call to the YaaS Emotion Service. Open the class in the Eclipse Java editor: For this, press ```Ctrl+Shift+T``` and enter ```EmotionService``` in the input field.
 
 2. Now add following method to the class:
    ```
@@ -24,6 +24,7 @@ In this exercise you'll learn how to use a remote service that is exposed throug
  		headers.setContentType(MediaType.APPLICATION_JSON);
  		HttpEntity<String> entity = new HttpEntity<String>("{ \"image_url\" : \"" + imageUrl + "\" }", headers);
 
+    RestTemplate restTemplate = new RestTemplate();
  		ResponseEntity<String> serviceResponse = restTemplate.exchange(EMOTION_SERVICE_URL, HttpMethod.POST, entity,
  				String.class);
 

@@ -8,8 +8,8 @@
 Deploy the following three HTML5 applications on your free developer account on the SAP HANA Cloud Platform:
 
   * **Slot Machine Simulation App**: This application allows you to enter URLs to images of human faces which can then be sent to the Casino Sentiment Service for test purposes to determine the emotion in the faces.
-  * **Casino Overview App**: This application uses the Casino Sentiment Service to aggregate results of the sentiment analysis on the level of the single casinos.
-  * **Slot Machines Overview App**: This application uses the Casino Sentiment Service to show results of the sentiment analysis on the level of the single slot machines of a specific casino.
+  * **Casino Overview App** (optional step): This application uses the Casino Sentiment Service to aggregate results of the sentiment analysis on the level of the single casinos.
+  * **Slot Machines Overview App** (optional step): This application uses the Casino Sentiment Service to show results of the sentiment analysis on the level of the single slot machines of a specific casino.
 
 #Exercise description
 
@@ -63,7 +63,7 @@ Deploy the following three HTML5 applications on your free developer account on 
 
 ### 2.2 Optional: Import Slot Machine Overview App
 
-This application is not further used in the exercises of this tutorial - that's why deploying this application is optional. 
+This application is not further used in the exercises of this tutorial - that's why deploying this application is optional.
 
 7. Right-click on the Workspace folder again and select the commands ```Import``` > ```From File System```.
 <br><br>
@@ -76,7 +76,7 @@ This application is not further used in the exercises of this tutorial - that's 
 
 ### 2.3 Optional: Import Casino Machine Overview App
 
-This application is not further used in the exercises of this tutorial - that's why deploying this application is optional. 
+This application is not further used in the exercises of this tutorial - that's why deploying this application is optional.
 
 9. For importing the 3rd app right-click on the Workspace folder again and select the commands ```Import``` > ```From File System```.   
 <br><br>
