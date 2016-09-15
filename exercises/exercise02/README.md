@@ -124,9 +124,7 @@ This application is not further used in the exercises of this tutorial - that's 
 <br>
    [example 1](http://65.media.tumblr.com/tumblr_lbrz5ep3Ze1qbih58.jpg)
 <br>
-   [example 2](http://richardbattista.org/wp-content/uploads/richardbattista-org/2013/03/smile-300x256.jpg)
-<br>
-   [example 3](http://www.abc.net.au/reslib/201502/r1385324_19654588.jpg)
+   [example 2](http://greatergood.berkeley.edu/images/uploads/dsmileAAF.jpg)
 <br><br>
 ![Account landing page](../../img/img02_3_008.png?raw=true)
 <br><br>
