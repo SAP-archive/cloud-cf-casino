@@ -139,7 +139,7 @@ In this exercise you'll learn how to use a remote service that is exposed throug
 2. To deploy the project, switch again in your command shell that you opened already in the previous exercise and enter again ```cf push```. After 1 to 2 minutes, the new project state should have been deployed.
 
 3. To test the POST methods of the service, open the REST client program ```Postman```: In your Chrome browser, open a new tab and call the URL ```chrome://apps```. This brings up the page with the browser extensions. Click on the ```Postman``` entry in the list to start Postman.
-   ![postman](/SAP/cloud-cf-casino/blob/master/img/img06_01.png?raw=true)
+   ![postman](../../img/img06_01.png?raw=true)
 
    URL: ```https://sentiment-service-<number>.cfapps.us10.hana.ondemand.com/sentiment/casinos/Las+Vegas+Gamble+Bamba/slotMachines/Blackjack/image```
 
@@ -154,7 +154,7 @@ In this exercise you'll learn how to use a remote service that is exposed throug
    ```
    { "imageUrl":"http://superiorplatform.com/pictures-of/faces/angry/03b-angry_kids.jpg"}
    ```
-   ![postman example](/SAP/cloud-cf-casino/blob/master/img/img06_02.png?raw=true)
+   ![postman example](../../img/img06_02.png?raw=true)
    With the URL specified above, you should get back a JSON response containing the property ```"emotion": "anger"```.
 
 ##Summary
