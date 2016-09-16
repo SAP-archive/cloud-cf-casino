@@ -33,7 +33,7 @@ In this exercise you'll learn how to develop the REST API of the Casino Sentimen
      */
     @RequestMapping(path = "/casinos", method = RequestMethod.GET, produces = { "application/json" })
     public ResponseEntity<String> getSentimentForCasinos() {
-       // PLACEHOLDER CODE SNIPPET 4
+       // PLACEHOLDER CODE SNIPPET 5
        final ResponseEntity<String> response = new ResponseEntity<String>("{ \"text\": \"Hello World 1\"}", HttpStatus.OK);
        return response;
     }
@@ -49,7 +49,7 @@ In this exercise you'll learn how to develop the REST API of the Casino Sentimen
    */
   @RequestMapping(path = "/casinos/{casinoId}", method = RequestMethod.GET, produces = { "application/json" })
   public ResponseEntity<String> getSentimentForCasino(@PathVariable String casinoId) {
-    // PLACEHOLDER CODE SNIPPET 5
+    // PLACEHOLDER CODE SNIPPET 6
     final ResponseEntity<String> response = new ResponseEntity<String>("{ \"text\": \"Hello World 2\"}", HttpStatus.OK);
     return response;
   }
@@ -61,7 +61,7 @@ In this exercise you'll learn how to develop the REST API of the Casino Sentimen
   @RequestMapping(path = "/casinos/{casinoId}/slotMachines", method = RequestMethod.GET, produces = {
       "application/json" })
   public ResponseEntity<String> getSentimentOfSlotMachinesForCasino(@PathVariable String casinoId) {
-    // PLACEHOLDER CODE SNIPPET 6
+    // PLACEHOLDER CODE SNIPPET 7
     final ResponseEntity<String> response = new ResponseEntity<String>("{ \"text\": \"Hello World 3\"}", HttpStatus.OK);
     return response;
   }
@@ -74,7 +74,7 @@ In this exercise you'll learn how to develop the REST API of the Casino Sentimen
       "application/json" })
   public ResponseEntity<String> getSentimentOfSlotMachineForCasino(@PathVariable String casinoId,
       @PathVariable String slotMachineId) {
-    // PLACEHOLDER CODE SNIPPET 7
+    // PLACEHOLDER CODE SNIPPET 8
     final ResponseEntity<String> response = new ResponseEntity<String>("{ \"text\": \"Hello World 4\"}", HttpStatus.OK);
     return response;
   }

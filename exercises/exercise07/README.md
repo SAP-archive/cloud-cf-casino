@@ -90,7 +90,7 @@ In this exercise you'll learn how to use the PostgreSQL service provided on HCP 
    ```
    The Spring framework will automatically initialize this property with the ```postgres-service``` instance that is bound to this application.
 
-2. Now search for ```// PLACEHOLDER CODE SNIPPET 4``` and replace the complete method body with following code block:
+2. Now search for ```// PLACEHOLDER CODE SNIPPET 5``` and replace the complete method body with following code block:
    ```
    final List<QueryResult> slotMachines = jdbcTemplate.query(
 				"SELECT casinoid, COUNT(*), SUM(sentiment) FROM slotmachines GROUP BY casinoid",
@@ -118,7 +118,7 @@ In this exercise you'll learn how to use the PostgreSQL service provided on HCP 
     <br>
     The method first uses the ```jdbcTemplate``` to query data from the slotmachines table and then creates the JSON response with  aggregated sentiment values for each casino.
 
-3. Next, search for ```// PLACEHOLDER CODE SNIPPET 5``` and replace the complete method body with following code block:
+3. Next, search for ```// PLACEHOLDER CODE SNIPPET 6``` and replace the complete method body with following code block:
    ```
    casinoId = urlDecode(casinoId);
 
@@ -145,7 +145,7 @@ In this exercise you'll learn how to use the PostgreSQL service provided on HCP 
    ```
    Press ```Ctrl+Shift+O``` to add the needed import statements.
 
-4. Next, search for ```// PLACEHOLDER CODE SNIPPET 6``` and replace the complete method body with following code block:
+4. Next, search for ```// PLACEHOLDER CODE SNIPPET 7``` and replace the complete method body with following code block:
    ```
    casinoId = urlDecode(casinoId);
 
@@ -175,7 +175,7 @@ In this exercise you'll learn how to use the PostgreSQL service provided on HCP 
    ```
    Press ```Ctrl+Shift+O``` to add the needed import statements.
 
-5. Next, search for ```// PLACEHOLDER CODE SNIPPET 7``` and replace the complete method body with following code block:
+5. Next, search for ```// PLACEHOLDER CODE SNIPPET 8``` and replace the complete method body with following code block:
    ```
    casinoId = urlDecode(casinoId);
    slotMachineId = urlDecode(slotMachineId);
