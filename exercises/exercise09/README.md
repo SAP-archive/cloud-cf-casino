@@ -78,9 +78,12 @@ After that click on the ```Save```button (top left icon with the cloud symbol).
 <br>
 ![Account landing page](../../img/img09_2_005.png?raw=true)
 <br>
+  After deployment has finished, click again ```Open the active version of the application``` to start the application. 
 
 2. You have now changed the Slot Machine Simulation Application to use your own Casino Sentiment Service that runs in your Cloud Foundry account. You can continue now to send images to the service through this application.
-**Summary**
+
+
+## Summary
 
 Congratulations! You have successfully completed the tutorial.
 <br><br>
