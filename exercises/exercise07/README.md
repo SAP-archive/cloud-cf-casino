@@ -210,26 +210,22 @@ In this exercise you'll learn how to use the PostgreSQL service provided on HCP 
 2. To deploy the project, switch again in your command shell that you opened already in the previous exercise and enter again ```cf push```. After 1 to 2 minutes, the new project state should have been deployed.
 
 3. To test the persistence layer that you have developed, first post again an image. With ```Postman```, trigger a request to:
-
-   URL: ```https://sentiment-service-<number>.cfapps.us10.hana.ondemand.com/sentiment/casinos/Las+Vegas+Gamble+Bamba/slotMachines/Blackjack/image```
-
-   Method: ```POST```
-
-   Headers:
-   ```
-   Content-Type = application/json
-   ```
-
-   Body (chose ```raw``` format in Postman):
-   ```
-   { "imageUrl":"http://superiorplatform.com/pictures-of/faces/angry/03b-angry_kids.jpg"}
-   ```
+  * URL: ```https://sentiment-service-<number>.cfapps.us10.hana.ondemand.com/sentiment/casinos/Las+Vegas+Gamble+Bamba/slotMachines/Blackjack/image```
+  * Method: ```POST```
+  * Headers:
+    ```
+     Content-Type = application/json
+    ```
+  * Body (chose ```raw``` format in Postman):
+    ```
+     { "imageUrl":"http://superiorplatform.com/pictures-of/faces/angry/03b-angry_kids.jpg"}
+    ```
 
   Now try to read the data again by using a GET method: In your Chrome browser, open a new tab and call the following URL:
   ```
   https://sentiment-service-<number>.cfapps.us10.hana.ondemand.com/sentiment/casinos/Las+Vegas+Gamble+Bamba/slotMachines/Blackjack
   ```
-
+  
   This should return a list of JSON objects which are already persisted for the specified casino and slot machine.   
 
 ##Summary
