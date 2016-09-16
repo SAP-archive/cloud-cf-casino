@@ -67,15 +67,15 @@ In this exercise you'll learn how to make the Casino Sentiment Service which is 
 
 2. To deploy the project, switch again in your command shell that you opened already in the previous exercise and enter again ```cf push```. After 1 to 2 minutes, the new project state should have been deployed.
 
-3. Now open in a new browser tab the Hystrix dashboard using following URL
+3. Now open in a new browser tab the Hystrix Dashboard using following URL
   ```
   https://sentiment-service-<number>.cfapps.us10.hana.ondemand.com/hystrix
   ```
-  In the URL field of the dashboard, enter the URL to the Hystrix sream:  
+  In the URL field of the dashboard, enter the URL to the Hystrix stream: 
   ```
   https://sentiment-service-test345.cfapps.us10.hana.ondemand.com/hystrix.stream
   ```
-  This brings up the Hystrix monitoring dashboard showing results for the Hystrix circuit breaker that we have added in this exercise.  
+  This brings up the Hystrix Dashboard showing results for the Hystrix circuit breaker that we have added in this exercise. For more information about the Hystrix Dashboard, see also this [link](https://github.com/Netflix/Hystrix/wiki/Dashboard). 
 
 ##Summary
 
