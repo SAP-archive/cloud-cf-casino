@@ -67,9 +67,15 @@ In this exercise you'll learn how to make the Casino Sentiment Service which is 
 
 2. To deploy the project, switch again in your command shell that you opened already in the previous exercise and enter again ```cf push```. After 1 to 2 minutes, the new project state should have been deployed.
 
-3. Optionally test the circuit breaker (if time remains): The easiest method to test the circuit breaker is to modify the ```EMOTION_SERVICE_URL``` constant in class ```EmotionService```. Just add a character at the end of the URL value to make the URL invalid. Now build and deploy the service again. If you now test one of the POST methods, as described in [exercise06](../exercise06), you should see in the application logs a log entry starting with ```addSentimentValueFallback``` - this is a log statement written by the fallback method we have implemented. You can get the last application logs if you enter ```cf logs sentiment-service-<number> --recent``` in the terminal.
-
-If you run this test, don't forget to correct the ```EMOTION_SERVICE_URL``` constant in class ```EmotionService``` again, and to build and redeploy the corrected version of the service at the end.
+3. Now open in a new browser tab the Hystrix dashboard using following URL
+  ```
+  https://sentiment-service-<number>.cfapps.us10.hana.ondemand.com/hystrix
+  ```
+  In the URL field of the dashboard, enter the URL to the Hystrix sream:  
+  ```
+  https://sentiment-service-test345.cfapps.us10.hana.ondemand.com/hystrix.stream
+  ```
+  This brings up the Hystrix monitoring dashboard showing results for the Hystrix circuit breaker that we have added in this exercise.  
 
 ##Summary
 
