@@ -73,7 +73,7 @@ In this exercise you'll learn how to make the Casino Sentiment Service which is 
   ```
   In the URL field of the dashboard, enter the URL to the Hystrix stream: 
   ```
-  https://sentiment-service-test345.cfapps.us10.hana.ondemand.com/hystrix.stream
+  https://sentiment-service-<number>.cfapps.us10.hana.ondemand.com/hystrix.stream
   ```
   This brings up the Hystrix Dashboard showing results for the Hystrix circuit breaker that we have added in this exercise. For more information about the Hystrix Dashboard, see also this [link](https://github.com/Netflix/Hystrix/wiki/Dashboard). 
 
