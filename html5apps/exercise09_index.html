@@ -18,24 +18,16 @@
 <body>
 	<div id="results"></div>
 	<div id="resultsOwn"></div>
-	<div id="my_camera"><h2>Test</h2></div>
-	
-	<!-- First, include the Webcam.js JavaScript Library -->
-    <!-- Re-used webcam code from https://github.com/jhuckaby/webcamjs under MIT License-->
-	<script type="text/javascript" src="webcam.min.js"></script>
-	
-	<!-- Configure a few settings and attach camera -->
-	<script language="JavaScript">
-		Webcam.set({width: 160,height: 120,	image_format: 'jpeg',jpeg_quality: 90	});
-		Webcam.attach( '#my_camera' );
-	</script>
-	
-	<!-- A button for taking snaps -->
-	<form><input type=button value="Check sentiment" onClick="check_sentiment()"></form>
-	
+
+	<!-- A button for using an image url -->
+	<form id="myformurl">
+		<input type="text" name="image_url" placeholder="Enter image URL here"><br/>
+		<input type=button value="Check sentiment of image in URL" onClick="check_sentiment_url()">
+	</form>
+
 	<!-- Code to handle taking the snapshot and displaying it locally -->
 	<script language="JavaScript">
-		function check_sentiment() {
+		function check_sentiment_url() {
 			
 			//##################################################
 			// Adapt the following values
@@ -43,12 +35,9 @@
 			var idCasino      = "Las Vegas Gamble Bamba";
 			var idSlotmachine = "BucketBandit1";
 			//##################################################
-
-			// take snapshot and get image data
-			Webcam.snap( function(data_uri) {
-				// In data_uri you have the image file
-				var myData = JSON.stringify({"dataUri": data_uri});
-				var url = "/sentimentservice/" + idCasino + "/slotMachines/" + idSlotmachine + "/datauri";
+				var image_url = document.getElementById("myformurl").elements["image_url"].value;
+				var myData = JSON.stringify({"imageUrl": image_url});
+				var url = "/sentimentservice/" + idCasino + "/slotMachines/" + idSlotmachine + "/image";
 
 				$.ajax({
 				    type: "POST",
@@ -58,15 +47,15 @@
 				    contentType: "application/json; charset=utf-8",
 				    dataType: "json",
 				    success: function(response){
-				    	document.getElementById('results').innerHTML =  '<center><h2>Sentiment detector</h2><img src="'+data_uri+'"/><h3>Detected ' + response.emotion+ '</h3></center>';
+				    	document.getElementById('results').innerHTML =  '<center><h2>Sentiment detector</h2><img src="'+image_url+'"/><h3>Detected ' + response.emotion+ '</h3></center>';
 				    	//alert(response);
 				    },
 				    failure: function(errMsg) {
-				    	document.getElementById('results').innerHTML =  '<center><h2>Sentiment detector</h2><img src="'+data_uri+'"/><h3>Detected ' + errMsg + '</h3></center>';
+				    	document.getElementById('results').innerHTML =  '<center><h2>Sentiment detector</h2><img src="'+image_url+'"/><h3>Detected ' + errMsg + '</h3></center>';
 				    }
 				});
 
-				var urlOwn = "/ownsentimentservice/" + idCasino + "/slotMachines/" + idSlotmachine + "/datauri";
+				var urlOwn = "/ownsentimentservice/" + idCasino + "/slotMachines/" + idSlotmachine + "/image";
 
 				$.ajax({
 				    type: "POST",
@@ -76,20 +65,20 @@
 				    contentType: "application/json; charset=utf-8",
 				    dataType: "json",
 				    success: function(response){
-				    	document.getElementById('resultsOwn').innerHTML =  '<center><h2>Sentiment detector</h2><img src="'+data_uri+'"/><h3>Detected ' + response.emotion+ '</h3></center>';
+				    	document.getElementById('resultsOwn').innerHTML =  '<center><h2>Sentiment detector</h2><img src="'+image_url+'"/><h3>Detected ' + response.emotion+ '</h3></center>';
 				    	//alert(response);
 				    },
 				    failure: function(errMsg) {
-				    	document.getElementById('resultsOwn').innerHTML =  '<center><h2>Sentiment detector</h2><img src="'+data_uri+'"/><h3>Detected ' + errMsg + '</h3></center>';
+				    	document.getElementById('resultsOwn').innerHTML =  '<center><h2>Sentiment detector</h2><img src="'+image_url+'"/><h3>Detected ' + errMsg + '</h3></center>';
 				    }
 				});
 
-				document.getElementById('results').innerHTML =  '<img src="'+data_uri+'"/>';
-				document.getElementById('resultsOwn').innerHTML =  '<img src="'+data_uri+'"/>';
+				document.getElementById('results').innerHTML =  '<img src="'+image_url+'"/>';
+				document.getElementById('resultsOwn').innerHTML =  '<img src="'+image_url+'"/>';
 
-			} );
 		};
-	</script>
+	</script>	
+
 	
 </body>
 </html>
