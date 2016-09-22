@@ -58,7 +58,7 @@ In [exercise01](../exercise01/README.md) you have already cloned the git reposit
 ![manifest.yml](../../img/img04_08.png?raw=true)
 <br><br>
 
-9. Next, deploy the service to your Cloud Foundry space. For this go again into your command terminal (in case you closed it: see [exercise03](../exercise03) for how to open the terminal and how to connect to your Cloud Foundry org/space). In the terminal, navigate into the casino-sentiment-service project directory (D:\Files\Session\DEV262\cloud-cf-casino\casino-sentiment-service). To start the deployment,  enter ```cf push```. The deployment of the casino-sentiment-service will take 1 or 2 minutes and should finish successfully.
+9. Next, deploy the service to your Cloud Foundry space. For this go again into your command terminal (in case you closed it: see [exercise03](../exercise03) for how to open the terminal and how to connect to your Cloud Foundry org/space). In the terminal, navigate into the casino-sentiment-service project directory (D:\Files\Session\DEV262\cloud-cf-casino\casino-sentiment-service-initial). To start the deployment,  enter ```cf push```. The deployment of the casino-sentiment-service will take 1 or 2 minutes and should finish successfully.
 
 10. Once the project has been deployed, you can run the service in a browser with following URL (replace ```<number>``` by the number of your workplace): ```https://sentiment-service-<number>.cfapps.us10.hana.ondemand.com```. You should now see a documentation page that lists the to-be-developed REST API of the casino-sentiement-service.
 <br><br>
