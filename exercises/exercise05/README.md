@@ -122,10 +122,10 @@ In this exercise you'll learn how to develop the REST API of the Casino Sentimen
 
 3. Now refresh the application in the Web browser and test whether the REST API is alive: try out the URLs to the GET methods, with ```<number>``` again replaced by your workplace number:
    ```
-   https://https://sentiment-service-<number>.cfapps.us10.hana.ondemand.com/sentiment/casinos
-   https://https://sentiment-service-<number>.cfapps.us10.hana.ondemand.com/sentiment/casinos/Las+Vegas+1
-   https://https://sentiment-service-<number>.cfapps.us10.hana.ondemand.com/sentiment/casinos/Las+Vegas+1/slotMachines
-   https://https://sentiment-service-<number>.cfapps.us10.hana.ondemand.com/sentiment/casinos/Las+Vegas+1/slotMachines/test1
+   https://sentiment-service-<number>.cfapps.us10.hana.ondemand.com/sentiment/casinos
+   https://sentiment-service-<number>.cfapps.us10.hana.ondemand.com/sentiment/casinos/Las+Vegas+1
+   https://sentiment-service-<number>.cfapps.us10.hana.ondemand.com/sentiment/casinos/Las+Vegas+1/slotMachines
+   https://sentiment-service-<number>.cfapps.us10.hana.ondemand.com/sentiment/casinos/Las+Vegas+1/slotMachines/test1
    ```
    As response, you should see the different "Hello World X" strings in the browser.
 
