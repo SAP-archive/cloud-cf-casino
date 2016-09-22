@@ -27,8 +27,8 @@ Once you went through the exercise, you can explore the [cockpit of your free de
 2. Now switch to your **student directory folder** at D:\Files\Session\DEV262\. Enter:
    ```
    D:
-	 cd D:\Files\Session\DEV262\cloud-cf-casino\casino-sentiment-service
-	 ```
+   cd D:\Files\Session\DEV262\
+   ```
 	 
 3. Now type ```git clone https://github.com/SAP/cloud-cf-casino.git``` and press the return key.
 4. A new directory called ```cloud-cf-casino``` was created in your student directory folder.
