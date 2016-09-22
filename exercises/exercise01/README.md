@@ -24,7 +24,7 @@ Once you went through the exercise, you can explore the [cockpit of your free de
 1. Switch to the terminal on your computer. For that please:
 	* press the Windows key and the 'R' key
 	* type ```cmd``` into the input field and press the return key
-2. Now switch to your **student directory folder** at D:\Files\Session\DEV262\cloud-cf-casino\casino-sentiment-service. Enter:
+2. Now switch to your **student directory folder** at D:\Files\Session\DEV262\. Enter:
    ```
    D:
 	 cd D:\Files\Session\DEV262\cloud-cf-casino\casino-sentiment-service
