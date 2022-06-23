@@ -1,3 +1,5 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/cloud-cf-casino)](https://api.reuse.software/info/github.com/SAP-samples/cloud-cf-casino)
+
 # cloud-cf-casino
 
 Sample of a microservice running on SAP HANA Cloud Platform, Cloud Foundry services.
